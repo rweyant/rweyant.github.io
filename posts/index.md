@@ -1,5 +1,7 @@
 ---
 layout: post-index
-title: All Posts
-excerpt: "A List of Posts"
+title: Posts
+excerpt: "Some Posts"
+image:
+  feature: current-feature.jpg
 ---

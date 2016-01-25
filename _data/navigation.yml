@@ -3,8 +3,14 @@
 - title: About
   url: /about/
 
-- title: Sample Posts
-  url: /posts/
+- title: R
+  url: /r/
 
-- title: Theme Setup
-  url: /theme-setup/
+- title: Python
+  url: /python/
+
+- title: Music
+  url: /music/
+
+- title: Chicken Wings
+  url: /chicken-wings/

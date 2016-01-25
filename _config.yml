@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:            Site Title
+title:            Rob Weyant
 locale:           en_US
-url:
+url: http://localhost:4000/
 
 
 # Jekyll configuration
@@ -37,15 +37,16 @@ page_layout: page
 # Format titles with titlecase?
 titlecase: true
 
+excerpt_separator: "" 
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
+  name: Rob Weyant
+  avatar: sleeping-bear-dune.jpg
+  bio: "Data Scientist at Powerley"
   email:
   disqus-shortname:
-  twitter: #username
+  twitter: RobWeyant
   facebook: #username
   google:
     plus: #username
@@ -54,12 +55,12 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: rweyant
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
+  linkedin: robertweyant
   xing: #username
-  instagram: #username
-  lastfm: #username
+  instagram: rweyant
+  lastfm: rweyant
   tumblr: #username
   pinterest: #username
   foursquare: #username
@@ -68,8 +69,9 @@ owner:
   youtube: #username
   soundcloud: #username
   weibo: #username
-  flickr: #username
-  codepen: #username
+  flickr: #photos/133670842@N08
+  codepen: #username 
+  meetup: rweyant
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
