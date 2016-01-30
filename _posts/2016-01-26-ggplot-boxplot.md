@@ -22,8 +22,6 @@ ggplot(mtcars,aes(factor(vs),mpg))+geom_boxplot()
 
 <img src="/figure/source/2016-01-26-ggplot-boxplot/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
-
-
 # Additional Features
 
 ## Add Colors
@@ -56,8 +54,6 @@ ggplot(mtcars,aes(factor(vs),mpg,fill=factor(am)))+
 
 <img src="/figure/source/2016-01-26-ggplot-boxplot/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
-
- 
 # Changing Themes
 
 ## Modify Axes
@@ -83,8 +79,6 @@ ggplot(mtcars,aes(factor(vs),mpg,fill=factor(am)))+
 {% endhighlight %}
 
 <img src="/figure/source/2016-01-26-ggplot-boxplot/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
-
-
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-boxplot/ggplot-boxplot.Rmd)
