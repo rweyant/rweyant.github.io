@@ -3,14 +3,14 @@ layout: post
 title: spotifyr a wrapper for Spotify's API for R users
 excerpt: #
 modified: 2013-05-31
-tags: [R, API, Spotify]
+tags: [intro, beginner, jekyll, tutorial]
 comments: true
 image:
   feature: current-feature.jpg
 ---
 
 
-I've created an R wrapper for Spotify's API.  It is currently still in testing, development.  It was developed on Ubuntu, but I've had successful tests on Windows 7 too. 
+qI've created an R wrapper for Spotify's API.  It is currently still in testing, development.  It was developed on Ubuntu, but I've had successful tests on Windows 7 too. 
 
 It currently launches [Firefox](https://www.mozilla.org/en-US/firefox/new/) through [RSelenium](https://github.com/ropensci/RSelenium) for the full [authorization code flow](https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow).  Chrome and IE will eventually be supported, but are not yet.  All data from endpoints is converted to lists.  If you just want access to the public endpoints, this is not necessary.  
 
@@ -28,6 +28,7 @@ devtools::install_github('rweyant/spotifyr')
 ## Authentication
 
 For any usage below, you'll need to have proper credentials from Spotify.  Sign up for an account [here](https://developer.spotify.com/) and [create an app](https://developer.spotify.com/my-applications/#!/applications).
+
 
 
 {% highlight r %}
@@ -150,13 +151,4 @@ get_current_user_profile()
 - [Spotify API Endpoints](https://developer.spotify.com/web-api/endpoint-reference/)
 - [Source on GitHub](https://github.com/rweyant/spotifyr)
 
-
-{% highlight text %}
-## Error in readPNG("spotify.png"): unable to open spotify.png
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in rasterGrob(image, x = x, y = y, width = width, height = height, : object 'img' not found
-{% endhighlight %}
+<img src="figure/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;" />
