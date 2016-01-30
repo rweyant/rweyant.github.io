@@ -22,7 +22,7 @@ library(ggplot2)
 ggplot(iris,aes(Sepal.Width,Sepal.Length))+geom_point()
 ```
 
-<a href="#top">Back to top</a>
+
 
 # Additional Features
 
@@ -44,7 +44,7 @@ ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species))+geom_point(size=4)
 ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species,size=Petal.Length))+geom_point()
 ```
 
-<a href="#top">Back to top</a>
+
  
 # Aesthetics
 
@@ -87,7 +87,7 @@ ggplot(iris,aes(Sepal.Width,
   standard_theme                            # Modify axis/legend element size
 ```
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-scatterplot/ggplot-scatterplot.Rmd)

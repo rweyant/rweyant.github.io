@@ -25,7 +25,7 @@ hflights.agg <- hflights %>% group_by(Month,DayofMonth) %>% summarize(mean.time=
 ggplot(hflights.agg,aes(Month,DayofMonth,fill=mean.time))+geom_tile()
 ```
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/tree/master/R/tutorials/ggplot-heatmap/ggplot-heatmap.Rmd)

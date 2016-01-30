@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Musixmatch API Wrapper in R
+title: "Musixmatch API Wrapper in R""
 excerpt: #
 modified: 2016-01-30
 categories: [R]
@@ -12,14 +12,6 @@ image:
 
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE,results='hide'}
 source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
-```
-
-
-```{r, echo=FALSE,fig.height=1,fig.width=2,fig.align='left'}
-suppressWarnings(suppressPackageStartupMessages(library(png)))
-suppressPackageStartupMessages(library(grid))
-img <- readPNG('musixmatch.png')
-grid.raster(img)
 ```
 
 [Musixmatch](https://www.musixmatch.com/) is a website that has lots of data on musicians, their album, songs and lyrics.  They've created an API, which anyone can use to collect data, such as lyrics, genres, album and track metadata, and much more.  The goal of this API wrapper is to facilitate using the API in R, and collecting data in a convenient fashion
@@ -58,7 +50,7 @@ Otherwise, a simplified `data.frame` is returned.
 head(search_artist('slayer'))
 ```
 
-<a href="#top">Back to top</a>
+
 
 ### Get Artist Discography
 

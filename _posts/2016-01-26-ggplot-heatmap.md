@@ -12,9 +12,6 @@ image:
 
 
 
-{% highlight text %}
-## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
-{% endhighlight %}
 
 # Basic Syntax
 
@@ -62,27 +59,12 @@ head(hflights)
 
 {% highlight r %}
 hflights.agg <- hflights %>% group_by(Month,DayofMonth) %>% summarize(mean.time=mean(DepDelay,na.rm=TRUE))
-{% endhighlight %}
-
-
-
-{% highlight text %}
-Error in eval(expr, envir, enclos): could not find function "%>%"
-{% endhighlight %}
-
-
-
-{% highlight r %}
 ggplot(hflights.agg,aes(Month,DayofMonth,fill=mean.time))+geom_tile()
 {% endhighlight %}
 
+<img src="/figure/source/2016-01-26-ggplot-heatmap/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 
-{% highlight text %}
-Error in ggplot(hflights.agg, aes(Month, DayofMonth, fill = mean.time)): object 'hflights.agg' not found
-{% endhighlight %}
-
-<a href="#top">Back to top</a>
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/tree/master/R/tutorials/ggplot-heatmap/ggplot-heatmap.Rmd)

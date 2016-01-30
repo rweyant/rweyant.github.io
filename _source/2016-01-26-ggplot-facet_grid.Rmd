@@ -41,7 +41,7 @@ curPlot+facet_grid(.~Species)
 curPlot+facet_grid(Species~.)
 ```
 
-<a href="#top">Back to top</a>
+
 
 # Re-ordering the panels
 Simply re-order factor levels to change the order in which they're displayed
@@ -90,7 +90,7 @@ curPlot+facet_grid(Species~.,scales='free')
 curPlot+facet_grid(Species~Big.Leaf,scales='free',space='free')
 ```
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-histogram/ggplot-histogram.Rmd)

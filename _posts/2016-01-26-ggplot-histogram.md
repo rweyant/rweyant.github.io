@@ -11,9 +11,6 @@ image:
 ---
 
 
-{% highlight text %}
-## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
-{% endhighlight %}
 
 # Basic Syntax
 
@@ -32,7 +29,7 @@ ggplot(iris,aes(Sepal.Width))+geom_histogram()
 
 <img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
-<a href="#top">Back to top</a>
+
 
 # Additional Features
 
@@ -78,7 +75,7 @@ ggplot(iris,
 
 <img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
-<a href="#top">Back to top</a>
+
  
 # Aesthetics
 
@@ -114,7 +111,7 @@ ggplot(iris,aes(Sepal.Width,fill=Species))+
 
 <img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-histogram/ggplot-histogram.Rmd)

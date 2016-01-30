@@ -21,7 +21,7 @@ library(ggplot2)
 ggplot(mtcars,aes(factor(vs),mpg))+geom_boxplot()
 ```
 
-<a href="#top">Back to top</a>
+
 
 # Additional Features
 
@@ -46,7 +46,7 @@ ggplot(mtcars,aes(factor(vs),mpg,fill=factor(am)))+
                size=1.2)                     # Controls Whisker Thickness
 ```
 
-<a href="#top">Back to top</a>
+
  
 # Changing Themes
 
@@ -71,7 +71,7 @@ ggplot(mtcars,aes(factor(vs),mpg,fill=factor(am)))+
   standard_theme
 ```
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-boxplot/ggplot-boxplot.Rmd)

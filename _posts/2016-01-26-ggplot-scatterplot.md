@@ -12,9 +12,6 @@ image:
 
 
 
-{% highlight text %}
-## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
-{% endhighlight %}
 
 # Basic Syntax
 
@@ -26,7 +23,7 @@ ggplot(iris,aes(Sepal.Width,Sepal.Length))+geom_point()
 
 <img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
-<a href="#top">Back to top</a>
+
 
 # Additional Features
 
@@ -57,7 +54,7 @@ ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species,size=Petal.Length))+geom_
 
 <img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
-<a href="#top">Back to top</a>
+
  
 # Aesthetics
 
@@ -106,7 +103,7 @@ ggplot(iris,aes(Sepal.Width,
 
 <img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-scatterplot/ggplot-scatterplot.Rmd)

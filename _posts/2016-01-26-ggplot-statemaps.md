@@ -11,9 +11,6 @@ image:
 ---
 
 
-{% highlight text %}
-## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
-{% endhighlight %}
 
 
 <img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
@@ -28,17 +25,7 @@ census_data_url <- 'http://www.bertplot.com/visualization/wp-content/uploads/201
 census_data <- read.csv(census_data_url)
 census_data$region = tolower(census_data$GEO.display.label)
 census_data <- census_data %>% rename(born_in_us=HC03_VC132)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-Error in eval(expr, envir, enclos): could not find function "%>%"
-{% endhighlight %}
-
-
-
-{% highlight r %}
+ 
 library(ggplot2)
 # Load US State Coordinates
 state_coords <- map_data("state")
@@ -47,8 +34,10 @@ state_coords <- map_data("state")
 
 
 {% highlight text %}
-Error: Package `maps` required for `map_data`.
-Please install and try again.
+
+ # ATTENTION: maps v3.0 has an updated 'world' map.        #
+ # Many country borders and names have changed since 1990. #
+ # Type '?world' or 'news(package="maps")'. See README_v3. #
 {% endhighlight %}
 
 
@@ -58,44 +47,19 @@ Please install and try again.
 state_data <- left_join(state_coords,
                        census_data,
                        by='region')
-{% endhighlight %}
 
-
-
-{% highlight text %}
-Error in eval(expr, envir, enclos): could not find function "left_join"
-{% endhighlight %}
-
-
-
-{% highlight r %}
 # Basic plot
 map <- 
   ggplot(state_data) +
   geom_polygon(aes(x = long, y = lat,
                    group = group,
                    fill = born_in_us))
-{% endhighlight %}
-
-
-
-{% highlight text %}
-Error in ggplot(state_data): object 'state_data' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 map
 {% endhighlight %}
 
+<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 
-{% highlight text %}
-Error in eval(expr, envir, enclos): object 'map' not found
-{% endhighlight %}
-
-<a href="#top">Back to top</a>
 
 # Change Coordinate Projection
 Requires installation of <b>{mapproj}</b> package
@@ -107,10 +71,12 @@ map+coord_map(project='conic',lat0=30)
 
 
 {% highlight text %}
-Error in eval(expr, envir, enclos): object 'map' not found
+Error in loadNamespace(name): there is no package called 'mapproj'
 {% endhighlight %}
 
-<a href="#top">Back to top</a>
+<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+
+
 
 # Aesthetics
 
@@ -142,25 +108,16 @@ map <-
   coord_map(project='conic',lat0=30)+
   scale_fill_gradient('% Born in US')+  # Change Legend Label
   map_theme
-{% endhighlight %}
-
-
-
-{% highlight text %}
-Error in ggplot(state_data): object 'state_data' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 map  
 {% endhighlight %}
 
 
 
 {% highlight text %}
-Error in eval(expr, envir, enclos): object 'map' not found
+Error in loadNamespace(name): there is no package called 'mapproj'
 {% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-statemaps/ggplot-statemaps.Rmd)

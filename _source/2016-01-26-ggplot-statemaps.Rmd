@@ -50,7 +50,7 @@ map <-
 map
 ```
 
-<a href="#top">Back to top</a>
+
 
 # Change Coordinate Projection
 Requires installation of <b>{mapproj}</b> package
@@ -58,7 +58,7 @@ Requires installation of <b>{mapproj}</b> package
 map+coord_map(project='conic',lat0=30)
 ```
 
-<a href="#top">Back to top</a>
+
 
 # Aesthetics
 

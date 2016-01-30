@@ -11,9 +11,6 @@ image:
 ---
 
 
-{% highlight text %}
-## Error in loadNamespace(name): there is no package called 'devtools'
-{% endhighlight %}
 
 There are many ways to connect to a database in R, the one I prefer is to use the [RJDBC](https://github.com/s-u/RJDBC) package, because it's fairly straight forward and simple to use RJDBC.  You need to get your driver, and then define the DSN.  Then you create a connection object and are good to go.
 
@@ -39,7 +36,7 @@ When you're done, you can and *should* disconnect with `dbDisconnect` function.
 dbDisconnect(connection)
 {% endhighlight %}
 
-<a href="#top">Back to top</a>
+
 
 # Connecting to Teradata Database
 
@@ -54,7 +51,7 @@ connection <- dbConnect(drv,connectionString,YOUR_USER_NAME,YOUR_PWD)
 
 Now you're ready to send requests to a Teradata machine.
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/)

@@ -21,7 +21,7 @@ library(ggplot2)
 ggplot(iris,aes(Sepal.Width))+geom_histogram()
 ```
 
-<a href="#top">Back to top</a>
+
 
 # Additional Features
 
@@ -44,7 +44,7 @@ ggplot(iris,
        aes(Sepal.Width,fill=Species))+geom_histogram(aes(y=..density..))
 ```
 
-<a href="#top">Back to top</a>
+
  
 # Aesthetics
 
@@ -74,7 +74,7 @@ ggplot(iris,aes(Sepal.Width,fill=Species))+
         legend.title=element_text(size=16))   # Change legend title text-size
 ```
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-histogram/ggplot-histogram.Rmd)

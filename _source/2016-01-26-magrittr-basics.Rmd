@@ -17,6 +17,8 @@ img <- readPNG('magrittr.png')
 grid.raster(img)
 ```
 
+<br>
+
 The [magrittr](https://github.com/smbache/magrittr) package offers a new operator that can help improve readability of your code, and make it easier to update and modify data wrangling code.  The %>% operator has been adopted into `dplyr` and many of [Hadley Wickham's](https://github.com/hadley) packages are written to be pipe-friendly.
 
 # The Problem
@@ -27,7 +29,7 @@ The [magrittr](https://github.com/smbache/magrittr) package offers a new operato
 sapply(iris[iris$Sepal.Length < mean(iris$Sepal.Length),-5],FUN = mean)
 ```
 
-### A (Possible) Solution - the pipe %>% {.build}
+### A (Possible) Solution - the pipe %>% 
 
 - Similar to Unix pipe |
 - Code can be written in the order of execution, left to right
@@ -47,8 +49,6 @@ sapply(iris[iris$Sepal.Length < mean(iris$Sepal.Length),-5],FUN = mean)
 library(magrittr,quietly=T)
 library(dplyr,quietly=T)
 ```
-
-<a href="#top">Back to top</a>
 
 # What %>% is doing
 
@@ -75,11 +75,6 @@ mtcars %>%
   geom_point()
 ```
 
-
-
-
-
-
 ### Even more complicated example
 
 ```{r, eval=FALSE}
@@ -96,10 +91,6 @@ df <-
 ```
 [Source](http://www.r-statistics.com/2014/08/simpler-r-coding-with-pipes-the-present-and-future-of-the-magrittr-package/)
 
-
-<a href="#top">Back to top</a>
-
-
 ```{r,eval=TRUE,echo=FALSE,message=FALSE,warning=FALSE}
 # This is because the stats package has a filter function also, and ggplot2 depends on stats
 unloadNamespace('dplyr')
@@ -115,7 +106,6 @@ library(dplyr)
 - `mutate()`
 - `select()`
 
-
 ```{r}
 sapply(iris[iris$Sepal.Length < mean(iris$Sepal.Length),-5],FUN = mean)
 iris %>%
@@ -124,8 +114,6 @@ iris %>%
   select(-Species,-avg.length) %>%
   summarise_each(funs(mean))
 ```
-
-<a href="#top">Back to top</a>
 
 ## %$% The exposition operator
 
@@ -137,8 +125,6 @@ table(CO2$Treatment,CO2$Type)
 # with(CO2,table(Treatment,Type))
 CO2 %$% table(Treatment,Type)
 ```
-
-<a href="#top">Back to top</a>
 
 ## %T>% The Tee Operator
 
@@ -153,13 +139,9 @@ plot %>%  # Make scatterplot and keep going
 colMeans
 ```
 
-<a href="#top">Back to top</a>
-
 ## %<>% The Compound Assignment Operator
 - Combines a pipe and an assignment operator
 - Think `i++` or `x+=z` from the C family, Python, Ruby, etc.
-
-<a href="#top">Back to top</a>
 
 ## %<>% The Compound Assignment Operator
 ```{r}
@@ -168,8 +150,6 @@ df
 df %<>% arrange(col1)
 df
 ```
-
-<a href="#top">Back to top</a>
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/magrittr-basics/magrittr-basics.Rmd)

@@ -12,9 +12,6 @@ image:
 
 
 
-{% highlight text %}
-## Error in loadNamespace(name): there is no package called 'devtools'
-{% endhighlight %}
 
 # Basic Syntax abc
 The first few lines help set everything up.  We create a new variable on the `iris` dataset so that we can make some more interesting plots.  Second, we create a theme for our plots so that the labels and titles are readable.
@@ -23,34 +20,7 @@ The first few lines help set everything up.  We create a new variable on the `ir
 {% highlight r %}
 library(ggplot2)
 library(dplyr)
-{% endhighlight %}
 
-
-
-{% highlight text %}
-
-Attaching package: 'dplyr'
-{% endhighlight %}
-
-
-
-{% highlight text %}
-The following objects are masked from 'package:stats':
-
-    filter, lag
-{% endhighlight %}
-
-
-
-{% highlight text %}
-The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union
-{% endhighlight %}
-
-
-
-{% highlight r %}
 iris <- iris %>% group_by(Species) %>% mutate(Big.Leaf=ifelse(Petal.Length > mean(Petal.Length),'Big','Small'))
 
 # Theme elements to make plot nicer
@@ -77,7 +47,7 @@ curPlot+facet_grid(Species~.)
 
 <img src="/figure/source/2016-01-26-ggplot-facet_grid/unnamed-chunk-1-2.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
-<a href="#top">Back to top</a>
+
 
 # Re-ordering the panels
 Simply re-order factor levels to change the order in which they're displayed
@@ -159,7 +129,7 @@ curPlot+facet_grid(Species~Big.Leaf,scales='free',space='free')
 
 <img src="/figure/source/2016-01-26-ggplot-facet_grid/unnamed-chunk-7-2.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
 
-<a href="#top">Back to top</a>
+
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-histogram/ggplot-histogram.Rmd)
