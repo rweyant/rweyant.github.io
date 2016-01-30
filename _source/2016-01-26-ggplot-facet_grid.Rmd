@@ -10,12 +10,12 @@ image:
   feature: current-feature.jpg
 ---
 
-
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
 source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 ```
 
-# Basic Syntax abc
+# Basic Syntax
+
 The first few lines help set everything up.  We create a new variable on the `iris` dataset so that we can make some more interesting plots.  Second, we create a theme for our plots so that the labels and titles are readable.
 
 ```{r}
@@ -41,8 +41,6 @@ curPlot+facet_grid(.~Species)
 curPlot+facet_grid(Species~.)
 ```
 
-
-
 # Re-ordering the panels
 Simply re-order factor levels to change the order in which they're displayed
 ```{r}
@@ -58,8 +56,6 @@ curPlot+facet_grid(Species~.)
 curPlot+facet_grid(Species~Big.Leaf)
 curPlot+facet_grid(Big.Leaf~Species)
 ```
-
-## 
 
 ```{r}
 curPlot+facet_grid(Species+Big.Leaf~.)
@@ -80,7 +76,6 @@ curPlot+facet_grid(Big.Leaf~Species,margins='Big.Leaf')
 curPlot+facet_grid(Big.Leaf~Species,margins=TRUE)
 ```
 
-
 # Axis Control
 
 Normally, axes have a fixed range common to all panels and all panels are the same dimensions.  We can allow the limits and the dimensions of the axes to vary freely.
@@ -89,8 +84,6 @@ Normally, axes have a fixed range common to all panels and all panels are the sa
 curPlot+facet_grid(Species~.,scales='free')
 curPlot+facet_grid(Species~Big.Leaf,scales='free',space='free')
 ```
-
-
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-histogram/ggplot-histogram.Rmd)
