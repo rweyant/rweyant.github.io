@@ -1,8 +1,14 @@
 ---
-title: "spotifyr: a wrapper for Spotify's API for R users"
-html_document:
-    toc: true
+layout: post
+title: spotifyr a wrapper for Spotify's API for R users
+excerpt: #
+modified: 2013-05-31
+tags: [R, API, Spotify]
+comments: true
+image:
+  feature: current-feature.jpg
 ---
+
 
 I've created an R wrapper for Spotify's API.  It is currently still in testing, development.  It was developed on Ubuntu, but I've had successful tests on Windows 7 too. 
 
