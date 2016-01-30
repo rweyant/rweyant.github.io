@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Boxplot Basics in ggplot2
+title: Basic Heatmap in ggplot2
 categories: [R]
 tags: [R, ggplot2, data-visualization ]
 excerpt: #
@@ -9,7 +9,6 @@ comments: true
 image:
   feature: current-feature.jpg
 ---
-
 
 
 
@@ -63,8 +62,6 @@ ggplot(hflights.agg,aes(Month,DayofMonth,fill=mean.time))+geom_tile()
 {% endhighlight %}
 
 <img src="/figure/source/2016-01-26-ggplot-heatmap/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
-
-
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/tree/master/R/tutorials/ggplot-heatmap/ggplot-heatmap.Rmd)

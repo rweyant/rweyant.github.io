@@ -10,7 +10,6 @@ image:
   feature: current-feature.jpg
 ---
 
-
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
 source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 ```
@@ -21,8 +20,6 @@ source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 library(ggplot2)
 ggplot(iris,aes(Sepal.Width,Sepal.Length))+geom_point()
 ```
-
-
 
 # Additional Features
 
@@ -44,8 +41,6 @@ ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species))+geom_point(size=4)
 ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species,size=Petal.Length))+geom_point()
 ```
 
-
- 
 # Aesthetics
 
 ## Add Outlines to points
@@ -86,8 +81,6 @@ ggplot(iris,aes(Sepal.Width,
   scale_size_continuous('Petal Length')+      # Add Label to Legend
   standard_theme                            # Modify axis/legend element size
 ```
-
-
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-scatterplot/ggplot-scatterplot.Rmd)

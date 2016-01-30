@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Boxplot Basics in ggplot2
+title: Basic Heatmap in ggplot2
 categories: [R]
 tags: [R, ggplot2, data-visualization ]
 excerpt: #
@@ -9,7 +9,6 @@ comments: true
 image:
   feature: current-feature.jpg
 ---
-
 
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
 source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
@@ -24,8 +23,6 @@ head(hflights)
 hflights.agg <- hflights %>% group_by(Month,DayofMonth) %>% summarize(mean.time=mean(DepDelay,na.rm=TRUE))
 ggplot(hflights.agg,aes(Month,DayofMonth,fill=mean.time))+geom_tile()
 ```
-
-
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/tree/master/R/tutorials/ggplot-heatmap/ggplot-heatmap.Rmd)

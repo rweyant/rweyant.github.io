@@ -21,8 +21,6 @@ library(ggplot2)
 ggplot(iris,aes(Sepal.Width))+geom_histogram()
 ```
 
-
-
 # Additional Features
 
 ## Add Groups
@@ -44,8 +42,6 @@ ggplot(iris,
        aes(Sepal.Width,fill=Species))+geom_histogram(aes(y=..density..))
 ```
 
-
- 
 # Aesthetics
 
 ## Add Outlines to Bars
@@ -73,8 +69,6 @@ ggplot(iris,aes(Sepal.Width,fill=Species))+
         legend.text=element_text(size=14),    # Change legend value text-size
         legend.title=element_text(size=16))   # Change legend title text-size
 ```
-
-
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-histogram/ggplot-histogram.Rmd)
