@@ -42,8 +42,6 @@ map
 
 <img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
-
-
 # Change Coordinate Projection
 Requires installation of <b>{mapproj}</b> package
 
@@ -52,8 +50,6 @@ map+coord_map(project='conic',lat0=30)
 {% endhighlight %}
 
 <img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
-
-
 
 # Aesthetics
 
