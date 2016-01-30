@@ -11,17 +11,19 @@ image:
 ---
 
 
-
-```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
-source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
-```
+{% highlight text %}
+## Error in loadNamespace(name): there is no package called 'devtools'
+{% endhighlight %}
 
 # Basic Syntax
 
-```{r}
+
+{% highlight r %}
 library(ggplot2)
 ggplot(mtcars,aes(factor(vs),mpg))+geom_boxplot()
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-boxplot/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
 
@@ -29,24 +31,33 @@ ggplot(mtcars,aes(factor(vs),mpg))+geom_boxplot()
 
 ## Add Colors
 
-```{r}
+
+{% highlight r %}
 ggplot(mtcars,aes(factor(vs),mpg,fill=factor(vs)))+geom_boxplot()
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-boxplot/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 ## Multiple Groups
 
-```{r}
+
+{% highlight r %}
 ggplot(mtcars,aes(factor(vs),mpg,fill=factor(am)))+geom_boxplot()
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-boxplot/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 ## Edit Width/Spacing
 
-```{r}
+
+{% highlight r %}
 ggplot(mtcars,aes(factor(vs),mpg,fill=factor(am)))+
   geom_boxplot(width=0.4,                    # Controls Width of Boxes
                position=position_dodge(0.5), # Controls Space between Boxes
                size=1.2)                     # Controls Whisker Thickness
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-boxplot/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
  
@@ -54,7 +65,8 @@ ggplot(mtcars,aes(factor(vs),mpg,fill=factor(am)))+
 
 ## Modify Axes
 
-```{r}
+
+{% highlight r %}
 standard_theme <- 
   theme(axis.text.x=element_text(size=14),    # Change x-axis value text-size
         axis.title.x=element_text(size=18),   # Change x-axis label text-size
@@ -71,7 +83,9 @@ ggplot(mtcars,aes(factor(vs),mpg,fill=factor(am)))+
   scale_y_continuous('Miles Per Gallon (MPG)')+
   scale_fill_discrete('AM')+
   standard_theme
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-boxplot/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
 

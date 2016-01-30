@@ -10,8 +10,6 @@ image:
   feature: current-feature.jpg
 ---
 
-
-
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
 source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 ```
