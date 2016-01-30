@@ -80,7 +80,7 @@ Error in xmlToDataFrame(nodes = getNodeSet(xml, "//album/album_id"), stringsAsFa
 Currently supports all methods for the musixmatch API (e.g. track.lyrics.get, album.tracks.get, artist.related..get).  Not all methods have a `simplify` option yet, but these options are being actively developed.  Check the [GitHub](https://github.com/rweyant/musixmatch) for updates.
 
 
-<br>
+
 
 #### More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/musixmatch-api-post/musixmatch-api-post.Rmd)

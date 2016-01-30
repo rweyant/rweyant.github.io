@@ -12,7 +12,7 @@ image:
 
 <img src="/figure/source/2016-01-26-magrittr-basics/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
-<br>
+
 
 The [magrittr](https://github.com/smbache/magrittr) package offers a new operator that can help improve readability of your code, and make it easier to update and modify data wrangling code.  The %>% operator has been adopted into `dplyr` and many of [Hadley Wickham's](https://github.com/hadley) packages are written to be pipe-friendly.
 
@@ -60,8 +60,8 @@ df %>% head(1)  # same as using head(df,1)
 
 
 {% highlight text %}
-##         x1       x2        x3
-## 1 2.022697 1.509711 0.5120793
+##          x1        x2         x3
+## 1 0.9836479 0.4554726 -0.3232914
 {% endhighlight %}
 
 
@@ -73,8 +73,8 @@ df %>% head(.,1)  # same as using head(df,1)
 
 
 {% highlight text %}
-##         x1       x2        x3
-## 1 2.022697 1.509711 0.5120793
+##          x1        x2         x3
+## 1 0.9836479 0.4554726 -0.3232914
 {% endhighlight %}
 
 ### A slightly more complicated example
@@ -218,11 +218,11 @@ df
 
 {% highlight text %}
 ##        col1
-## 1  2.667117
-## 2  3.492247
-## 3  1.288135
-## 4  1.662436
-## 5 11.998790
+## 1 1.9493899
+## 2 0.1607936
+## 3 0.1463735
+## 4 2.0450395
+## 5 0.3237476
 {% endhighlight %}
 
 
@@ -236,11 +236,11 @@ df
 
 {% highlight text %}
 ##        col1
-## 1  1.288135
-## 2  1.662436
-## 3  2.667117
-## 4  3.492247
-## 5 11.998790
+## 1 0.1463735
+## 2 0.1607936
+## 3 0.3237476
+## 4 1.9493899
+## 5 2.0450395
 {% endhighlight %}
 
 # More Resources
