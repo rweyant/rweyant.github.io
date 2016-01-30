@@ -11,7 +11,7 @@ image:
 ---
 
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
-source('/media/roberto/Main Storage/Documents/bertplot/R/source/common_rmd_options.R')
+source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 ```
 
 There are many ways to connect to a database in R, the one I prefer is to use the [RJDBC](https://github.com/s-u/RJDBC) package, because it's fairly straight forward and simple to use RJDBC.  You need to get your driver, and then define the DSN.  Then you create a connection object and are good to go.
@@ -48,13 +48,6 @@ connection <- dbConnect(drv,connectionString,YOUR_USER_NAME,YOUR_PWD)
 ```
 
 Now you're ready to send requests to a Teradata machine.
-
-```{r, echo=FALSE,fig.height=1,fig.width=2,fig.align='center'}
-suppressWarnings(suppressPackageStartupMessages(library(png)))
-suppressPackageStartupMessages(library(grid))
-img <- readPNG('teradata.png')
-grid.raster(img)
-```
 
 <a href="#top">Back to top</a>
 
