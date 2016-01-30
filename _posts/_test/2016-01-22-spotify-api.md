@@ -3,7 +3,7 @@ layout: post
 title: spotifyr a wrapper for Spotify's API for R users
 excerpt: #
 modified: 2013-05-31
-tags: [intro, beginner, jekyll, tutorial]
+tags: [R, spotify, API]
 comments: true
 image:
   feature: current-feature.jpg
@@ -149,4 +149,4 @@ get_current_user_profile()
 - [Spotify API Endpoints](https://developer.spotify.com/web-api/endpoint-reference/)
 - [Source on GitHub](https://github.com/rweyant/spotifyr)
 
-<img src="/figure/source/2016-01-26-2016-01-22-spotify-api/spotify-logo-1.png" title="plot of chunk spotify-logo" alt="plot of chunk spotify-logo" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-01-22-spotify-api/spotify-logo-1.png" title="plot of chunk spotify-logo" alt="plot of chunk spotify-logo" style="display: block; margin: auto;" />

@@ -3,11 +3,12 @@ layout: post
 title: spotifyr a wrapper for Spotify's API for R users
 excerpt: #
 modified: 2013-05-31
-tags: [R, spotify, API]
+tags: [intro, beginner, jekyll, tutorial]
 comments: true
 image:
   feature: current-feature.jpg
 ---
+
 
 I've created an R wrapper for Spotify's API.  It is currently still in testing, development.  It was developed on Ubuntu, but I've had successful tests on Windows 7 too. 
 
@@ -27,6 +28,7 @@ devtools::install_github('rweyant/spotifyr')
 ## Authentication
 
 For any usage below, you'll need to have proper credentials from Spotify.  Sign up for an account [here](https://developer.spotify.com/) and [create an app](https://developer.spotify.com/my-applications/#!/applications).
+
 
 
 {% highlight r %}
@@ -149,4 +151,4 @@ get_current_user_profile()
 - [Spotify API Endpoints](https://developer.spotify.com/web-api/endpoint-reference/)
 - [Source on GitHub](https://github.com/rweyant/spotifyr)
 
-<img src="/figure/source/2016-01-22-spotify-api/spotify-logo-1.png" title="plot of chunk spotify-logo" alt="plot of chunk spotify-logo" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;" />
