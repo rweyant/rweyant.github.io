@@ -16,7 +16,7 @@ source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 
 # Basic Syntax
 
-```{r,message=FALSE}
+```{r,message=FALSE,fig.width=5,fig.width=4}
 # Load Census Data
 census_data_url <- 'http://www.bertplot.com/visualization/wp-content/uploads/2015/08/ACS_13_1YR_DP02_with_ann.csv'
 census_data <- read.csv(census_data_url)
@@ -45,7 +45,7 @@ map
 
 # Change Coordinate Projection
 Requires installation of <b>{mapproj}</b> package
-```{r}
+```{r,fig.width=5,fig.width=4}
 map+coord_map(project='conic',lat0=30)
 ```
 
@@ -55,7 +55,7 @@ map+coord_map(project='conic',lat0=30)
 
 Here we remove axes text and make legend text larger.  We also remove the background so the only elements visible are the map and the legend
 
-```{r}
+```{r,fig.width=6,fig.width=5}
 library(grid)
 
 # Purely aesthetic changes
@@ -81,7 +81,6 @@ map <-
   scale_fill_gradient('% Born in US')+  # Change Legend Label
   map_theme
 map  
-
 ```
 
 # More Resources
