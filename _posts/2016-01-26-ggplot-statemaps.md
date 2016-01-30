@@ -2,7 +2,7 @@
 layout: post
 title: "State Maps with ggplot2"
 categories: [R]
-tags: [R, ggplot2 ]
+tags: [R, ggplot2]
 excerpt: #
 modified: 2016-01-30
 comments: true
@@ -10,10 +10,6 @@ image:
   feature: current-feature.jpg
 ---
 
-
-
-
-<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 
 # Basic Syntax
@@ -29,20 +25,7 @@ census_data <- census_data %>% rename(born_in_us=HC03_VC132)
 library(ggplot2)
 # Load US State Coordinates
 state_coords <- map_data("state")
-{% endhighlight %}
 
-
-
-{% highlight text %}
-
- # ATTENTION: maps v3.0 has an updated 'world' map.        #
- # Many country borders and names have changed since 1990. #
- # Type '?world' or 'news(package="maps")'. See README_v3. #
-{% endhighlight %}
-
-
-
-{% highlight r %}
 # Join Census data with map data
 state_data <- left_join(state_coords,
                        census_data,
@@ -57,7 +40,7 @@ map <-
 map
 {% endhighlight %}
 
-<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 
 
@@ -68,13 +51,7 @@ Requires installation of <b>{mapproj}</b> package
 map+coord_map(project='conic',lat0=30)
 {% endhighlight %}
 
-
-
-{% highlight text %}
-Error in loadNamespace(name): there is no package called 'mapproj'
-{% endhighlight %}
-
-<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 
 
@@ -111,13 +88,7 @@ map <-
 map  
 {% endhighlight %}
 
-
-
-{% highlight text %}
-Error in loadNamespace(name): there is no package called 'mapproj'
-{% endhighlight %}
-
-<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-statemaps/ggplot-statemaps.Rmd)

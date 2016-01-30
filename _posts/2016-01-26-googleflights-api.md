@@ -50,5 +50,3 @@ The actual API only has one method, so there's not much else to say about workin
 - [Package Source on Github](https://github.com/rweyant/googleflights)
 - [QPX Express API Documentation](https://developers.google.com/qpx-express/v1/)
 
-
-<img src="/figure/source/2016-01-26-googleflights-api/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />

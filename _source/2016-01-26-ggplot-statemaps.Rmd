@@ -2,7 +2,7 @@
 layout: post
 title: "State Maps with ggplot2"
 categories: [R]
-tags: [R, ggplot2 ]
+tags: [R, ggplot2]
 excerpt: #
 modified: 2016-01-30
 comments: true
@@ -14,18 +14,9 @@ image:
 source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 ```
 
-
-```{r, echo=FALSE,fig.height=5,fig.width=6,fig.align='center'}
-suppressWarnings(suppressPackageStartupMessages(library(png)))
-suppressPackageStartupMessages(library(grid))
-img <- readPNG('thumbnail.png')
-grid.raster(img)
-```
-
-
 # Basic Syntax
 
-```{r}
+```{r,message=FALSE}
 # Load Census Data
 census_data_url <- 'http://www.bertplot.com/visualization/wp-content/uploads/2015/08/ACS_13_1YR_DP02_with_ann.csv'
 census_data <- read.csv(census_data_url)
