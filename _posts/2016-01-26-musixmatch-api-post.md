@@ -10,35 +10,33 @@ image:
   feature: current-feature.jpg
 ---
 
-```{r setup, echo=FALSE, warning=FALSE,cache=FALSE,results='hide'}
-source('/media/roberto/Main Storage/Documents/bertplot/R/source/common_rmd_options.R')
-```
+
+{% highlight text %}
+## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
+{% endhighlight %}
 
 
-```{r, echo=FALSE,fig.height=1,fig.width=2,fig.align='left'}
-suppressWarnings(suppressPackageStartupMessages(library(png)))
-suppressPackageStartupMessages(library(grid))
-img <- readPNG('musixmatch.png')
-grid.raster(img)
-```
+<img src="/figure/source/2016-01-26-musixmatch-api-post/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto auto auto 0;" />
 
 [Musixmatch](https://www.musixmatch.com/) is a website that has lots of data on musicians, their album, songs and lyrics.  They've created an API, which anyone can use to collect data, such as lyrics, genres, album and track metadata, and much more.  The goal of this API wrapper is to facilitate using the API in R, and collecting data in a convenient fashion
 
 ## Installation
 
-```{r, eval=FALSE,results='hide'}
+
+{% highlight r %}
 devtools::install_github('rweyant/musixmatch')
-```
+{% endhighlight %}
 
 ## Basic Usage
 
 First, you need to get an [API Key](https://developer.musixmatch.com/signup).
-```{r, eval=FALSE}
+
+{% highlight r %}
 library(musixmatch)
 
 # Set API key in a place all the functions have access to
 set_apikey(YOUR_APIKEY)
-```
+{% endhighlight %}
 
 ## Get basic data
 
@@ -46,17 +44,25 @@ set_apikey(YOUR_APIKEY)
 
 Here you can find basic information about artists that match the search term.  If you specify `simplify=FALSE` the result is the full XML document parsed.
 
-```{r,eval=FALSE}
+
+{% highlight r %}
 # Return list of full XML result in a list
 result <- search_artist(q_artist = 'slayer',simplify=FALSE)
-```
+{% endhighlight %}
 
 Otherwise, a simplified `data.frame` is returned.
 
-```{r}
+
+{% highlight r %}
 # Return data.frame of most useful fields to identify artist
 head(search_artist('slayer'))
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+Error in head(search_artist("slayer")): could not find function "search_artist"
+{% endhighlight %}
 
 <a href="#top">Back to top</a>
 
@@ -64,9 +70,16 @@ head(search_artist('slayer'))
 
 This function identifies artists using the artist_id returned from the previous function.  It returns all the albums (sometimes multiple versions of an album) musixmatch has listed for an artist.  You can similarly get the full XML document as a list using the `simplify=FALSE` option.
 
-```{r}
+
+{% highlight r %}
 head(get_artist_albums(2683))
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+Error in head(get_artist_albums(2683)): could not find function "get_artist_albums"
+{% endhighlight %}
 
 ## Next Steps
 

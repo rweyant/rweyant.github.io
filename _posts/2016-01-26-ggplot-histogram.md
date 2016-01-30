@@ -10,16 +10,27 @@ image:
   feature: current-feature.jpg
 ---
 
-```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
-source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
-```
+
+{% highlight text %}
+## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
+{% endhighlight %}
 
 # Basic Syntax
 
-```{r}
+
+{% highlight r %}
 library(ggplot2)
 ggplot(iris,aes(Sepal.Width))+geom_histogram()
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+`stat_bin()` using `bins = 30`. Pick better value with
+`binwidth`.
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
 
@@ -27,22 +38,45 @@ ggplot(iris,aes(Sepal.Width))+geom_histogram()
 
 ## Add Groups
 
-```{r}
+
+{% highlight r %}
 ggplot(iris,aes(Sepal.Width,fill=Species))+geom_histogram()
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+`stat_bin()` using `bins = 30`. Pick better value with
+`binwidth`.
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 ## Fix Binwidth
 
-```{r}
+
+{% highlight r %}
 ggplot(iris,aes(Sepal.Width,fill=Species))+geom_histogram(binwidth=.10)
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 ## As a Density
 
-```{r}
+
+{% highlight r %}
 ggplot(iris,
        aes(Sepal.Width,fill=Species))+geom_histogram(aes(y=..density..))
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+`stat_bin()` using `bins = 30`. Pick better value with
+`binwidth`.
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
  
@@ -50,17 +84,21 @@ ggplot(iris,
 
 ## Add Outlines to Bars
 
-```{r}
+
+{% highlight r %}
 ggplot(iris,aes(Sepal.Width,fill=Species))+
   geom_histogram(binwidth=.1,    # Fixed Bin-width
                  alpha=0.7,      # Make Slightly transparent
                  color='black',  # Add Outline
                  size=0.4)       # Thickness of Outline
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 ## Modify Axes
 
-```{r}
+
+{% highlight r %}
 ggplot(iris,aes(Sepal.Width,fill=Species))+
   geom_histogram(binwidth=.1,alpha=0.7,color='black',size=0.4) +
   scale_x_continuous('Sepal Width')+          # Add label to x-axis
@@ -72,7 +110,9 @@ ggplot(iris,aes(Sepal.Width,fill=Species))+
         axis.title.y=element_text(size=18),   # Change y-axis label text-size
         legend.text=element_text(size=14),    # Change legend value text-size
         legend.title=element_text(size=16))   # Change legend title text-size
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-histogram/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
 

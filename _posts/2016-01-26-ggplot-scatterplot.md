@@ -11,16 +11,20 @@ image:
 ---
 
 
-```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
-source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
-```
+
+{% highlight text %}
+## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
+{% endhighlight %}
 
 # Basic Syntax
 
-```{r}
+
+{% highlight r %}
 library(ggplot2)
 ggplot(iris,aes(Sepal.Width,Sepal.Length))+geom_point()
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
 
@@ -28,21 +32,30 @@ ggplot(iris,aes(Sepal.Width,Sepal.Length))+geom_point()
 
 ## Add Groups/Colors
 
-```{r}
+
+{% highlight r %}
 ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species))+geom_point()
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 ## Increase Size
 
-```{r}
+
+{% highlight r %}
 ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species))+geom_point(size=4)
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 ## Variable Size
 
-```{r}
+
+{% highlight r %}
 ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species,size=Petal.Length))+geom_point()
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
  
@@ -50,7 +63,8 @@ ggplot(iris,aes(Sepal.Width,Sepal.Length,color=Species,size=Petal.Length))+geom_
 
 ## Add Outlines to points
 Here the key is to use `shape=21` or `pch=21.` Values from 21-25 in the `shape` or `pch` parameter will separately specify the fill and color argument
-```{r}
+
+{% highlight r %}
 ggplot(iris,aes(Sepal.Width,
                 Sepal.Length,
                 size=Petal.Length,
@@ -58,13 +72,16 @@ ggplot(iris,aes(Sepal.Width,
   geom_point(shape=21,              # Set shape/pch to be circle with outline
              color='black',         # Set outline to be black
              alpha=0.8)             # Add some transparency
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 # Changing Themes
 
 ## Modify Axes
 
-```{r}
+
+{% highlight r %}
 standard_theme <- 
   theme(axis.text.x=element_text(size=14),    # Change x-axis value text-size
         axis.title.x=element_text(size=18),   # Change x-axis label text-size
@@ -85,7 +102,9 @@ ggplot(iris,aes(Sepal.Width,
   scale_fill_discrete('Iris Species')+        # Add label to Legend
   scale_size_continuous('Petal Length')+      # Add Label to Legend
   standard_theme                            # Modify axis/legend element size
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-ggplot-scatterplot/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
 <a href="#top">Back to top</a>
 

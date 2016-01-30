@@ -10,12 +10,7 @@ image:
   feature: current-feature.jpg
 ---
 
-```{r, echo=FALSE,fig.height=4,fig.width=6,fig.align='center'}
-suppressWarnings(suppressPackageStartupMessages(library(png)))
-suppressPackageStartupMessages(library(grid))
-img <- readPNG('magrittr.png')
-grid.raster(img)
-```
+<img src="/figure/source/2016-01-26-magrittr-basics/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 The [magrittr](https://github.com/smbache/magrittr) package offers a new operator that can help improve readability of your code, and make it easier to update and modify data wrangling code.  The %>% operator has been adopted into `dplyr` and many of [Hadley Wickham's](https://github.com/hadley) packages are written to be pipe-friendly.
 
@@ -23,9 +18,10 @@ The [magrittr](https://github.com/smbache/magrittr) package offers a new operato
 
 ### R code can get hard to read
 
-```{r, eval=FALSE}
+
+{% highlight r %}
 sapply(iris[iris$Sepal.Length < mean(iris$Sepal.Length),-5],FUN = mean)
-```
+{% endhighlight %}
 
 ### A (Possible) Solution - the pipe %>% {.build}
 
@@ -43,10 +39,7 @@ sapply(iris[iris$Sepal.Length < mean(iris$Sepal.Length),-5],FUN = mean)
 - `%$%` - exposition operator
 - `%<>%` - compound assignment pipe operator
 
-```{r, echo=FALSE, warning=FALSE,message=FALSE}
-library(magrittr,quietly=T)
-library(dplyr,quietly=T)
-```
+
 
 <a href="#top">Back to top</a>
 
@@ -57,23 +50,46 @@ the first argument of the right-hand side, or where it finds a *`.`*
 
 ### Basic Example
 
-```{r}
+
+{% highlight r %}
 df <- data.frame(x1=rnorm(100),x2=rnorm(100),x3=rnorm(100))
 
 df %>% head(1)  # same as using head(df,1)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##          x1       x2         x3
+## 1 0.2208814 -1.24887 -0.3559651
+{% endhighlight %}
+
+
+
+{% highlight r %}
 df %>% head(.,1)  # same as using head(df,1)
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##          x1       x2         x3
+## 1 0.2208814 -1.24887 -0.3559651
+{% endhighlight %}
 
 ### Slightly more complicated example
 
-```{r,fig.height=5,fig.width=5,fig.align='center'}
+
+{% highlight r %}
 library(ggplot2)
 mtcars %>%
   xtabs(~gear+carb,data=.) %>%
   as.data.frame %>%
   ggplot(.,aes(x=gear,y=carb,size=Freq)) +
   geom_point()
-```
+{% endhighlight %}
+
+<img src="/figure/source/2016-01-26-magrittr-basics/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 
 
@@ -82,7 +98,8 @@ mtcars %>%
 
 ### Even more complicated example
 
-```{r, eval=FALSE}
+
+{% highlight r %}
 # Generate some sample data.
 df <-
   data.frame(
@@ -93,18 +110,14 @@ df <-
       sample(replace = TRUE) %>%
       factor(labels = c("Buy", "Sell"))
   )
-```
+{% endhighlight %}
 [Source](http://www.r-statistics.com/2014/08/simpler-r-coding-with-pipes-the-present-and-future-of-the-magrittr-package/)
 
 
 <a href="#top">Back to top</a>
 
 
-```{r,eval=TRUE,echo=FALSE,message=FALSE,warning=FALSE}
-# This is because the stats package has a filter function also, and ggplot2 depends on stats
-unloadNamespace('dplyr')
-library(dplyr)
-```
+
 
 ## The combination of %>% with {dplyr}
 
@@ -116,14 +129,34 @@ library(dplyr)
 - `select()`
 
 
-```{r}
+
+{% highlight r %}
 sapply(iris[iris$Sepal.Length < mean(iris$Sepal.Length),-5],FUN = mean)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Sepal.Length  Sepal.Width Petal.Length  Petal.Width 
+##      5.19875      3.13375      2.46250      0.66375
+{% endhighlight %}
+
+
+
+{% highlight r %}
 iris %>%
   mutate(avg.length=mean(Sepal.Length)) %>%
   filter(Sepal.Length<avg.length) %>%
   select(-Species,-avg.length) %>%
   summarise_each(funs(mean))
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+## 1      5.19875     3.13375       2.4625     0.66375
+{% endhighlight %}
 
 <a href="#top">Back to top</a>
 
@@ -132,11 +165,35 @@ iris %>%
 - Similar to `with()` or `attach()`
 - Useful for functions that don't take a data parameter
 
-```{r}
+
+{% highlight r %}
 table(CO2$Treatment,CO2$Type)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##             
+##              Quebec Mississippi
+##   nonchilled     21          21
+##   chilled        21          21
+{% endhighlight %}
+
+
+
+{% highlight r %}
 # with(CO2,table(Treatment,Type))
 CO2 %$% table(Treatment,Type)
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##             Type
+## Treatment    Quebec Mississippi
+##   nonchilled     21          21
+##   chilled        21          21
+{% endhighlight %}
 
 <a href="#top">Back to top</a>
 
@@ -145,13 +202,21 @@ CO2 %$% table(Treatment,Type)
 - Allows a "break" in the pipe.
 - Executes right-hand side of `%T>%`, but will continue to pipe through to next statement
 
-```{r}
+
+{% highlight r %}
 iris %>%
 filter(Species != 'virginica') %>%
 select(Sepal.Width,Sepal.Length) %T>%
 plot %>%  # Make scatterplot and keep going
 colMeans
-```
+{% endhighlight %}
+
+![plot of chunk unnamed-chunk-10](/figure/source/2016-01-26-magrittr-basics/unnamed-chunk-10-1.png)
+
+{% highlight text %}
+##  Sepal.Width Sepal.Length 
+##        3.099        5.471
+{% endhighlight %}
 
 <a href="#top">Back to top</a>
 
@@ -162,12 +227,40 @@ colMeans
 <a href="#top">Back to top</a>
 
 ## %<>% The Compound Assignment Operator
-```{r}
+
+{% highlight r %}
 df <- rexp(5,.5) %>% data.frame(col1=.)
 df
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##       col1
+## 1 1.320817
+## 2 2.841647
+## 3 3.699026
+## 4 0.183954
+## 5 1.366901
+{% endhighlight %}
+
+
+
+{% highlight r %}
 df %<>% arrange(col1)
 df
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##       col1
+## 1 0.183954
+## 2 1.320817
+## 3 1.366901
+## 4 2.841647
+## 5 3.699026
+{% endhighlight %}
 
 <a href="#top">Back to top</a>
 

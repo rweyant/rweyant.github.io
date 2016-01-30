@@ -12,7 +12,7 @@ image:
 
 
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE,results='hide'}
-source('/media/roberto/Main Storage/Documents/bertplot/R/source/common_rmd_options.R')
+source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 ```
 
 I'm working on an R package that facilitates getting data out of the [QPX Express API](https://developers.google.com/qpx-express/) and into R.  QPX Express API offers global airline pricing in a single, standard API.  You can search it and get data on flight prices across lots of different carriers.

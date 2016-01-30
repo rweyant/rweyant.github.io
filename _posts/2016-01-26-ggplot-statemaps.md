@@ -10,53 +10,105 @@ image:
   feature: current-feature.jpg
 ---
 
-```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
-source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
-```
+
+{% highlight text %}
+## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
+{% endhighlight %}
 
 
-```{r, echo=FALSE,fig.height=5,fig.width=6,fig.align='center'}
-suppressWarnings(suppressPackageStartupMessages(library(png)))
-suppressPackageStartupMessages(library(grid))
-img <- readPNG('thumbnail.png')
-grid.raster(img)
-```
+<img src="/figure/source/2016-01-26-ggplot-statemaps/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 
 # Basic Syntax
 
-```{r}
+
+{% highlight r %}
 # Load Census Data
 census_data_url <- 'http://www.bertplot.com/visualization/wp-content/uploads/2015/08/ACS_13_1YR_DP02_with_ann.csv'
 census_data <- read.csv(census_data_url)
 census_data$region = tolower(census_data$GEO.display.label)
 census_data <- census_data %>% rename(born_in_us=HC03_VC132)
- 
+{% endhighlight %}
+
+
+
+{% highlight text %}
+Error in eval(expr, envir, enclos): could not find function "%>%"
+{% endhighlight %}
+
+
+
+{% highlight r %}
 library(ggplot2)
 # Load US State Coordinates
 state_coords <- map_data("state")
+{% endhighlight %}
 
+
+
+{% highlight text %}
+Error: Package `maps` required for `map_data`.
+Please install and try again.
+{% endhighlight %}
+
+
+
+{% highlight r %}
 # Join Census data with map data
 state_data <- left_join(state_coords,
                        census_data,
                        by='region')
+{% endhighlight %}
 
+
+
+{% highlight text %}
+Error in eval(expr, envir, enclos): could not find function "left_join"
+{% endhighlight %}
+
+
+
+{% highlight r %}
 # Basic plot
 map <- 
   ggplot(state_data) +
   geom_polygon(aes(x = long, y = lat,
                    group = group,
                    fill = born_in_us))
+{% endhighlight %}
+
+
+
+{% highlight text %}
+Error in ggplot(state_data): object 'state_data' not found
+{% endhighlight %}
+
+
+
+{% highlight r %}
 map
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+Error in eval(expr, envir, enclos): object 'map' not found
+{% endhighlight %}
 
 <a href="#top">Back to top</a>
 
 # Change Coordinate Projection
 Requires installation of <b>{mapproj}</b> package
-```{r}
+
+{% highlight r %}
 map+coord_map(project='conic',lat0=30)
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+Error in eval(expr, envir, enclos): object 'map' not found
+{% endhighlight %}
 
 <a href="#top">Back to top</a>
 
@@ -64,7 +116,8 @@ map+coord_map(project='conic',lat0=30)
 
 Here we remove axes text and make legend text larger.  We also remove the background so the only elements visible are the map and the legend
 
-```{r}
+
+{% highlight r %}
 library(grid)
 
 # Purely aesthetic changes
@@ -89,9 +142,25 @@ map <-
   coord_map(project='conic',lat0=30)+
   scale_fill_gradient('% Born in US')+  # Change Legend Label
   map_theme
-map  
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
+Error in ggplot(state_data): object 'state_data' not found
+{% endhighlight %}
+
+
+
+{% highlight r %}
+map  
+{% endhighlight %}
+
+
+
+{% highlight text %}
+Error in eval(expr, envir, enclos): object 'map' not found
+{% endhighlight %}
 
 # More Resources
 - [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-statemaps/ggplot-statemaps.Rmd)

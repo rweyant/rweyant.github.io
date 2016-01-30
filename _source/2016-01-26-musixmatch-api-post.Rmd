@@ -11,7 +11,7 @@ image:
 ---
 
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE,results='hide'}
-source('/media/roberto/Main Storage/Documents/bertplot/R/source/common_rmd_options.R')
+source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 ```
 
 
