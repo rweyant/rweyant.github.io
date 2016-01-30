@@ -27,7 +27,7 @@ sapply(iris[iris$Sepal.Length < mean(iris$Sepal.Length),-5],FUN = mean)
 
 ### A (Possible) Solution - the pipe %>% 
 
-- Similar to Unix pipe |
+- Similar to Unix pipe `|`
 - Code can be written in the order of execution, left to right
 - `%>%` will "pipe" information from one statement to the next
   * `x %>% f` is equivalent to `f(x)`
@@ -60,8 +60,8 @@ df %>% head(1)  # same as using head(df,1)
 
 
 {% highlight text %}
-##          x1          x2       x3
-## 1 0.6022856 -0.01663281 1.280829
+##          x1        x2         x3
+## 1 0.7089623 -1.711427 -0.2146104
 {% endhighlight %}
 
 
@@ -73,8 +73,8 @@ df %>% head(.,1)  # same as using head(df,1)
 
 
 {% highlight text %}
-##          x1          x2       x3
-## 1 0.6022856 -0.01663281 1.280829
+##          x1        x2         x3
+## 1 0.7089623 -1.711427 -0.2146104
 {% endhighlight %}
 
 ### Slightly more complicated example
@@ -219,11 +219,11 @@ df
 
 {% highlight text %}
 ##        col1
-## 1 1.5308088
-## 2 0.2098324
-## 3 3.5493290
-## 4 0.7945075
-## 5 2.0478644
+## 1 1.2272287
+## 2 0.6344516
+## 3 3.2321217
+## 4 0.2378609
+## 5 0.2366714
 {% endhighlight %}
 
 
@@ -237,11 +237,11 @@ df
 
 {% highlight text %}
 ##        col1
-## 1 0.2098324
-## 2 0.7945075
-## 3 1.5308088
-## 4 2.0478644
-## 5 3.5493290
+## 1 0.2366714
+## 2 0.2378609
+## 3 0.6344516
+## 4 1.2272287
+## 5 3.2321217
 {% endhighlight %}
 
 # More Resources

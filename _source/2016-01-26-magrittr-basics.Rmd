@@ -31,7 +31,7 @@ sapply(iris[iris$Sepal.Length < mean(iris$Sepal.Length),-5],FUN = mean)
 
 ### A (Possible) Solution - the pipe %>% 
 
-- Similar to Unix pipe |
+- Similar to Unix pipe `|`
 - Code can be written in the order of execution, left to right
 - `%>%` will "pipe" information from one statement to the next
   * `x %>% f` is equivalent to `f(x)`
