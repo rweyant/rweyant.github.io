@@ -17,7 +17,7 @@ img <- readPNG('magrittr.png')
 grid.raster(img)
 ```
 
-<br>
+
 
 The [magrittr](https://github.com/smbache/magrittr) package offers a new operator that can help improve readability of your code, and make it easier to update and modify data wrangling code.  The %>% operator has been adopted into `dplyr` and many of [Hadley Wickham's](https://github.com/hadley) packages are written to be pipe-friendly.
 
@@ -64,7 +64,7 @@ df %>% head(1)  # same as using head(df,1)
 df %>% head(.,1)  # same as using head(df,1)
 ```
 
-### Slightly more complicated example
+### A slightly more complicated example
 
 ```{r,fig.height=5,fig.width=5,fig.align='center'}
 library(ggplot2)
@@ -75,7 +75,7 @@ mtcars %>%
   geom_point()
 ```
 
-### Even more complicated example
+### An even more complicated example
 
 ```{r, eval=FALSE}
 # Generate some sample data.
@@ -143,7 +143,6 @@ colMeans
 - Combines a pipe and an assignment operator
 - Think `i++` or `x+=z` from the C family, Python, Ruby, etc.
 
-## %<>% The Compound Assignment Operator
 ```{r}
 df <- rexp(5,.5) %>% data.frame(col1=.)
 df

@@ -60,8 +60,8 @@ df %>% head(1)  # same as using head(df,1)
 
 
 {% highlight text %}
-##          x1        x2         x3
-## 1 0.7089623 -1.711427 -0.2146104
+##         x1       x2        x3
+## 1 2.022697 1.509711 0.5120793
 {% endhighlight %}
 
 
@@ -73,11 +73,11 @@ df %>% head(.,1)  # same as using head(df,1)
 
 
 {% highlight text %}
-##          x1        x2         x3
-## 1 0.7089623 -1.711427 -0.2146104
+##         x1       x2        x3
+## 1 2.022697 1.509711 0.5120793
 {% endhighlight %}
 
-### Slightly more complicated example
+### A slightly more complicated example
 
 
 {% highlight r %}
@@ -91,7 +91,7 @@ mtcars %>%
 
 <img src="/figure/source/2016-01-26-magrittr-basics/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
-### Even more complicated example
+### An even more complicated example
 
 
 {% highlight r %}
@@ -208,7 +208,6 @@ colMeans
 - Combines a pipe and an assignment operator
 - Think `i++` or `x+=z` from the C family, Python, Ruby, etc.
 
-## %<>% The Compound Assignment Operator
 
 {% highlight r %}
 df <- rexp(5,.5) %>% data.frame(col1=.)
@@ -219,11 +218,11 @@ df
 
 {% highlight text %}
 ##        col1
-## 1 1.2272287
-## 2 0.6344516
-## 3 3.2321217
-## 4 0.2378609
-## 5 0.2366714
+## 1  2.667117
+## 2  3.492247
+## 3  1.288135
+## 4  1.662436
+## 5 11.998790
 {% endhighlight %}
 
 
@@ -237,11 +236,11 @@ df
 
 {% highlight text %}
 ##        col1
-## 1 0.2366714
-## 2 0.2378609
-## 3 0.6344516
-## 4 1.2272287
-## 5 3.2321217
+## 1  1.288135
+## 2  1.662436
+## 3  2.667117
+## 4  3.492247
+## 5 11.998790
 {% endhighlight %}
 
 # More Resources
