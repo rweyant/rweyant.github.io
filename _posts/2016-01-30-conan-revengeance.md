@@ -7,7 +7,7 @@ excerpt: #
   modified: 2016-01-30
 comments: true
 image:
-  feature: current-feature.jpg
+  feature: conan-revengeance.jpg
 ---
 
 ![conan](/images/conan-revengeance.jpg)
