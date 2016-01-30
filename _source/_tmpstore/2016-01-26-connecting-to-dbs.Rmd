@@ -4,7 +4,7 @@ title: Connecting to Databases in R
 categories: [R,Databases]
 tags: [R, SQL, Oracle, Teradata ]
 excerpt: #
-modified: 2013-05-31
+modified: 2016-01-30
 comments: true
 image:
   feature: current-feature.jpg

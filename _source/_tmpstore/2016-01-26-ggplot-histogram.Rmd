@@ -5,7 +5,7 @@ title: "Histogram Basics in ggplot2"
 ---
 
 ```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
-source('../../source/common_rmd_options.R')
+source('~/Documents/code/bertplot/R/source/common_rmd_options.R')
 ```
 
 # Basic Syntax
