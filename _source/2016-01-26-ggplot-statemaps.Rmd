@@ -43,7 +43,7 @@ map
 
 # Change Coordinate Projection
 Requires installation of <b>{mapproj}</b> package
-```{r,fig.width=10,fig.width=8}
+```{r,fig.width=10,fig.height=8}
 map+coord_map(project='conic',lat0=30)
 ```
 
@@ -51,7 +51,7 @@ map+coord_map(project='conic',lat0=30)
 
 Here we remove axes text and make legend text larger.  We also remove the background so the only elements visible are the map and the legend
 
-```{r,fig.width=10,fig.width=8}
+```{r,fig.width=12,fig.height=10}
 library(grid)
 
 # Purely aesthetic changes
