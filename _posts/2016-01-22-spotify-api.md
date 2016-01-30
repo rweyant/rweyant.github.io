@@ -149,4 +149,4 @@ get_current_user_profile()
 - [Spotify API Endpoints](https://developer.spotify.com/web-api/endpoint-reference/)
 - [Source on GitHub](https://github.com/rweyant/spotifyr)
 
-<img src="/figure/source/2016-01-22-spotify-api/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-01-22-spotify-api/spotify-logo-1.png" title="plot of chunk spotify-logo" alt="plot of chunk spotify-logo" style="display: block; margin: auto;" />

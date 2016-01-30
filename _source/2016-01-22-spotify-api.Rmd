@@ -143,7 +143,7 @@ get_current_user_profile()
 - [Spotify API Endpoints](https://developer.spotify.com/web-api/endpoint-reference/)
 - [Source on GitHub](https://github.com/rweyant/spotifyr)
 
-```{r, echo=FALSE,fig.height=1,fig.width=2,fig.align='center'}
+```{r spotify-logo, echo=FALSE,fig.height=3,fig.width=3,fig.align='center'}
 suppressWarnings(suppressPackageStartupMessages(library(png)))
 suppressPackageStartupMessages(library(grid))
 img <- readPNG('spotify.png')
