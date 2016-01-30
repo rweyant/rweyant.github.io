@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Musixmatch API Wrapper in R
+title: "Musixmatch API Wrapper in R"
 excerpt: #
 modified: 2016-01-30
 categories: [R]
@@ -11,12 +11,6 @@ image:
 ---
 
 
-{% highlight text %}
-## Error: Can't find '/media/roberto/Main Storage/Documents/R/packages/musixmatch'.
-{% endhighlight %}
-
-
-<img src="/figure/source/2016-01-26-musixmatch-api-post/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto auto auto 0;" />
 
 [Musixmatch](https://www.musixmatch.com/) is a website that has lots of data on musicians, their album, songs and lyrics.  They've created an API, which anyone can use to collect data, such as lyrics, genres, album and track metadata, and much more.  The goal of this API wrapper is to facilitate using the API in R, and collecting data in a convenient fashion
 
@@ -61,10 +55,10 @@ head(search_artist('slayer'))
 
 
 {% highlight text %}
-Error in head(search_artist("slayer")): could not find function "search_artist"
+Error in xmlToDataFrame(nodes = getNodeSet(xml, "//artist/artist_id"), : error in evaluating the argument 'nodes' in selecting a method for function 'xmlToDataFrame': Error: Please install xml2 package
 {% endhighlight %}
 
-<a href="#top">Back to top</a>
+
 
 ### Get Artist Discography
 
@@ -78,7 +72,7 @@ head(get_artist_albums(2683))
 
 
 {% highlight text %}
-Error in head(get_artist_albums(2683)): could not find function "get_artist_albums"
+Error in xmlToDataFrame(nodes = getNodeSet(xml, "//album/album_id"), stringsAsFactors = FALSE): error in evaluating the argument 'nodes' in selecting a method for function 'xmlToDataFrame': Error: Please install xml2 package
 {% endhighlight %}
 
 ## Next Steps
