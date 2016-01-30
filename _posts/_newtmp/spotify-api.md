@@ -144,19 +144,4 @@ get_current_user_profile()
 - [Spotify API Endpoints](https://developer.spotify.com/web-api/endpoint-reference/)
 - [Source on GitHub](https://github.com/rweyant/spotifyr)
 
-
-{% highlight text %}
-## Error in library(png): there is no package called 'png'
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): could not find function "readPNG"
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in rasterGrob(image, x = x, y = y, width = width, height = height, : object 'img' not found
-{% endhighlight %}
+<img src="/figure/source/spotify-api/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" style="display: block; margin: auto;" />

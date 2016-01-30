@@ -1,0 +1,32 @@
+---
+layout: post
+title: Boxplot Basics in ggplot2
+categories: [R]
+tags: [R, ggplot2, data-visualization ]
+excerpt: #
+modified: 2013-05-31
+comments: true
+image:
+  feature: current-feature.jpg
+---
+
+
+```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
+source('../../source/common_rmd_options.R')
+```
+
+# Basic Syntax
+
+```{r}
+library(ggplot2)
+library(hflights)
+head(hflights)
+hflights.agg <- hflights %>% group_by(Month,DayofMonth) %>% summarize(mean.time=mean(DepDelay,na.rm=TRUE))
+ggplot(hflights.agg,aes(Month,DayofMonth,fill=mean.time))+geom_tile()
+```
+
+<a href="#top">Back to top</a>
+
+# More Resources
+- [Source as RMarkdown](https://github.com/rweyant/bertplot/tree/master/R/tutorials/ggplot-heatmap/ggplot-heatmap.Rmd)
+- [docs.ggplot2.org](http://docs.ggplot2.org/current/geom_tile.html)

@@ -1,0 +1,76 @@
+---
+html_document:
+  toc: true
+title: "Histogram Basics in ggplot2"
+---
+
+```{r setup, echo=FALSE, warning=FALSE,cache=FALSE}
+source('../../source/common_rmd_options.R')
+```
+
+# Basic Syntax
+
+```{r}
+library(ggplot2)
+ggplot(iris,aes(Sepal.Width))+geom_histogram()
+```
+
+<a href="#top">Back to top</a>
+
+# Additional Features
+
+## Add Groups
+
+```{r}
+ggplot(iris,aes(Sepal.Width,fill=Species))+geom_histogram()
+```
+
+## Fix Binwidth
+
+```{r}
+ggplot(iris,aes(Sepal.Width,fill=Species))+geom_histogram(binwidth=.10)
+```
+
+## As a Density
+
+```{r}
+ggplot(iris,
+       aes(Sepal.Width,fill=Species))+geom_histogram(aes(y=..density..))
+```
+
+<a href="#top">Back to top</a>
+ 
+# Aesthetics
+
+## Add Outlines to Bars
+
+```{r}
+ggplot(iris,aes(Sepal.Width,fill=Species))+
+  geom_histogram(binwidth=.1,    # Fixed Bin-width
+                 alpha=0.7,      # Make Slightly transparent
+                 color='black',  # Add Outline
+                 size=0.4)       # Thickness of Outline
+```
+
+## Modify Axes
+
+```{r}
+ggplot(iris,aes(Sepal.Width,fill=Species))+
+  geom_histogram(binwidth=.1,alpha=0.7,color='black',size=0.4) +
+  scale_x_continuous('Sepal Width')+          # Add label to x-axis
+  scale_y_continuous('Count')+                # Add label to y-axis
+  scale_fill_discrete('Iris Species')+        # Add label to legend
+  theme(axis.text.x=element_text(size=14),    # Change x-axis value text-size
+        axis.title.x=element_text(size=18),   # Change x-axis label text-size
+        axis.text.y=element_text(size=14),    # Change y-axis value text-size
+        axis.title.y=element_text(size=18),   # Change y-axis label text-size
+        legend.text=element_text(size=14),    # Change legend value text-size
+        legend.title=element_text(size=16))   # Change legend title text-size
+```
+
+<a href="#top">Back to top</a>
+
+# More Resources
+- [Source as RMarkdown](https://github.com/rweyant/bertplot/blob/master/R/tutorials/ggplot-histogram/ggplot-histogram.Rmd)
+- [docs.ggplot2.org](http://docs.ggplot2.org/0.9.3/geom_histogram.html)
+
