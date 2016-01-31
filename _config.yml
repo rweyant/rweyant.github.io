@@ -1,9 +1,9 @@
 # Site wide configuration
 
-title:            Rob Weyant
-locale:           en_US
-url: 		  http://rweyant.github.io
-
+title:    Rob Weyant
+locale:   en_US
+url:      ""
+baseurl:  ""
 
 # Jekyll configuration
 
