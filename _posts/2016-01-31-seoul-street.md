@@ -6,8 +6,6 @@ tags: [Food, Wings, food-and-drink]
 excerpt: #
 modified: 2016-01-31
 comments: true
-image:
-  feature: current-feature.jpg
 ---
 
 ![seoul-street](/images/seoul-street-full-box.png)

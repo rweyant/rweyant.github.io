@@ -6,8 +6,6 @@ tags: [Music, Doom ]
 excerpt: #
 modified: 2016-01-30
 comments: true
-image:
-  feature: current-feature.jpg
 ---
 
 ![conan](/images/conan-revengeance1.jpg)
