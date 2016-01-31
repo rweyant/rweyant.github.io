@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "gspread A wrapper for Google Spreadsheets in Python"
+title: "gspread - A wrapper for Google Spreadsheets in Python"
 categories: [Python]
 tags: [Python, API, googledocs ]
 excerpt: #

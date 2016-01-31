@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "spotifyr a wrapper for Spotify's API for R users"
+title: "spotifyr - a wrapper for Spotify's API for R users"
 excerpt: #
 modified: 2016-01-27
 categories: [R]
